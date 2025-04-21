@@ -1,0 +1,72 @@
+/* in static/css/index.css */
+.video-container video {
+  max-height: 420px;
+  width: auto;
+}
+.featured-video {
+  max-height: 500px;
+  height: auto;
+  width: 100%;
+}
+
+/* Center and constrain the width */
+.subtitle,
+.description {
+  max-width: 700px;
+  margin: 0.75em auto 1.5em;
+  line-height: 1.75;
+  position: relative;
+}
+
+/* Subtitles get a bold, shimmering gradient underline */
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.subtitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.4em;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-mid),
+    var(--gradient-end)
+  );
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Descriptions get lighter weight, softer color, and a bit of letter‑spacing */
+.description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--muted-text);
+  letter-spacing: 0.5px;
+  text-shadow: none;
+}
+
+/* If you have multiple description paragraphs, add spacing */
+.description + .description {
+  margin-top: 1em;
+}
+
+.cta {
+  font-weight: 800;  /* make characters thicker */
+  color: #fff;       /* ensure pure white text */
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.8),
+    0 0 8px rgba(255, 255, 255, 0.6);  /* add a glowing “shine” */
+}
+
+/* Optional: ramp up the shine on hover */
+.cta:hover {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 1),
+    0 0 12px rgba(255, 255, 255, 0.8);
+}
