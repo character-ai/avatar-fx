@@ -19,12 +19,15 @@
 }
 
 /* Subtitles get a bold, shimmering gradient underline */
-.subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
+.subtitle, .description {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 26px;
+  max-width: 650px;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
 }
+
 .subtitle::after {
   content: "";
   position: absolute;
@@ -41,16 +44,6 @@
   transform: translateX(-50%);
   border-radius: 2px;
 }
-
-/* Descriptions get lighter weight, softer color, and a bit of letter‑spacing */
-.description {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--muted-text);
-  letter-spacing: 0.5px;
-  text-shadow: none;
-}
-
 /* If you have multiple description paragraphs, add spacing */
 .description + .description {
   margin-top: 1em;
